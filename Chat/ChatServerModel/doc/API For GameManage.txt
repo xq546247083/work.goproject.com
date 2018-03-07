@@ -1,0 +1,61 @@
+1、ChatServerCenter提供获取聊天服务器地址、禁言、重新加载配置等API；
+2、url前缀为：http://{domain}/API/,其中domain可能为chat.xh.work.goproject.com，依项目的不同而不同；
+3、每个url的后缀都是不同的
+4、GET/POST方式都可以
+4、返回结果是一个JSON字符串，其中的Code=0表示成功，否则表示失败；如果失败可以显示Message字段，以便于发现问题所在
+
+/// 禁言（管理后台调用）
+static void Silent()
+{
+    String url = "http://{domain}/API/player/silent";
+
+    String playerId = "00957233-b685-4ca0-909e-ec652885a194";
+    Int32 minutes = 30; //禁言的分钟数
+    String postData = String.Format("Id={0}&Minutes={1}", playerId, minutes);
+
+    String resultStr = WebUtil.PostWebData(url, postData, DataCompress.NotCompress);
+    Dictionary<string, object> resultObj = JsonUtil.Deserialize(resultStr);
+
+    //Data：无
+}
+
+/// 解禁（管理后台调用）
+static void UnSilent()
+{
+    String url = "http://{domain}/API/player/unSilent";
+
+    String playerId = "00957233-b685-4ca0-909e-ec652885a194";
+    String postData = String.Format("Id={0}", playerId);
+
+    String resultStr = WebUtil.PostWebData(url, postData, DataCompress.NotCompress);
+    Dictionary<string, object> resultObj = JsonUtil.Deserialize(resultStr);
+
+    //Data：无
+}
+
+/// 查看禁言信息（管理后台调用）
+static void GetSilentInfo()
+{
+    String url = "http://{domain}/API/player/getSilentInfo";
+
+    String playerId = "00957233-b685-4ca0-909e-ec652885a194";
+    String postData = String.Format("Id={0}", playerId);
+
+    String resultStr = WebUtil.PostWebData(url, postData, DataCompress.NotCompress);
+    Dictionary<string, object> resultObj = JsonUtil.Deserialize(resultStr);
+
+    //Data：
+    data["IsInSilent"]：true表示禁言中，false表示未禁言
+    data["LeftMinutes"]：禁言剩余的分钟数
+}
+
+/// 重新加载配置
+static void Reload()
+{
+    String pushUrl = "http://{domain}/API/config/reload";
+   
+    String resultStr = WebUtil.PostWebData(pushUrl, "", DataCompress.NotCompress);
+    Dictionary<string, object> resultObj = JsonUtil.Deserialize(resultStr);       
+
+    //Data：无
+}

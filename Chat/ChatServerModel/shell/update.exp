@@ -1,0 +1,63 @@
+#! /usr/bin/expect -f
+
+#设置提示符
+set cmd_prompt "*@ubuntu:*"
+
+#获取导入参数
+set ipaddress [lindex $argv 0]  
+set username [lindex $argv 1]  
+set passwd [lindex $argv 2]
+set groupid [lindex $argv 3]
+set sourceUrl [lindex $argv 4]
+
+if { $argc != 5 } {  
+        end_user "usage: $argv0 ipaddress username passwd groupid sourceUrl\n"
+	exit 1  
+}
+  
+#设置超时时间(秒)
+set timeout 30  
+spawn ssh $username@$ipaddress  
+expect {
+	"yes/no" { send "yes\r";exp_continue }  
+	"password:" { send "$passwd\r" }  
+} 
+expect $cmd_prompt  
+
+#root模式
+send "sudo -i\r"
+expect "*password*"
+send "$passwd\r"
+expect $cmd_prompt
+
+#进入目录
+send "cd /home/bin/$groupid\r"
+expect $cmd_prompt
+
+#删除压缩包
+send "rm -rf *.zip\r"
+expect $cmd_prompt
+
+#wget下载更新文件并保存为ChatServer.zip
+send "wget -O ChatServer.zip $sourceUrl 2>/dev/null\r"
+expect $cmd_prompt
+
+#发送SIGTERM到运行中的进程,终止进程
+send "kill -15 $(ps -A | grep $groupid | grep -v grep |  awk '/ChatServer/{print \$1}') 2>/dev/null\r"
+expect $cmd_prompt
+
+#zip 解压
+send "unzip -o ChatServer.zip\r"
+expect $cmd_prompt
+
+#后台运行
+send "/home/bin/$groupid/ChatServer &\r"
+expect $cmd_prompt
+
+#退出root模式
+send "exit\r"
+expect $cmd_prompt
+
+#退出shell
+send "exit\r"
+expect eof { exit 0 }

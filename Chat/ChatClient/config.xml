@@ -1,0 +1,24 @@
+<root>
+	<!--是否是DEBUG模式-->
+	<DEBUG>true</DEBUG>
+
+	<!--基础配置-->
+	<BaseConfig>
+		<!--为ChatServer提供服务的监听地址-->
+		<ChatServerAddress>10.254.0.115:13011</ChatServerAddress>
+		<PlayerId>d4ce3dab-9d3b-47e4-8469-95f388645c6f</PlayerId>
+		<PartnerId>1003</PartnerId>
+		<ServerId>20018</ServerId>
+		<Token>50f1ee4c-623a-4f33-b6df-1fec65bafb51</Token>
+	</BaseConfig>
+
+	<ManageCenterConfig>
+	    <ManageCenterAPIUrl>https://managecentertest-slg.moqiplayer.com/API</ManageCenterAPIUrl>
+	    <IsResultCompressed>true</IsResultCompressed>
+	    <GroupType>Mix</GroupType>
+	    <SpecifiedIp></SpecifiedIp>
+	    <SpecifiedGroupId>0</SpecifiedGroupId>
+	    <IsGroupOpen>false</IsGroupOpen>
+	    <RefreshInterval>5</RefreshInterval>
+	</ManageCenterConfig>
+</root>

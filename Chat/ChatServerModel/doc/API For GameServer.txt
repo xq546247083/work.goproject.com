@@ -1,0 +1,56 @@
+ChatServerCenter和ChatServer均向GameServer提供了接口。包括：
+1、ChatServerCenter以API的方式向GameServer提供接口；
+2、ChatServer以TCP的方式向GameServer提供接口；
+
+
+一、ChatServerCenter向GameServer提供的接口：
+1、url前缀为：http://{domain}/API/,其中domain可能为chat.xh.work.goproject.com，依项目的不同而不同；
+2、GET/POST方式都可以
+3、返回结果是一个JSON字符串，其中的Code=0表示成功，否则表示失败；如果失败可以显示Message字段，以便于发现问题所在
+
+/// 获取聊天服务器地址
+static void GetChatServerAddress(){
+    String url = "http://{domain}/API/server/getAvailable";
+
+    String chatServerAddress = "";//首次为空，以后就使用上次返回的聊天服务器地址
+    String postData = String.Format("ChatServerAddress={0}", chatServerAddress);
+
+    String resultStr = WebUtil.PostWebData(url, postData, DataCompress.NotCompress);
+    Dictionary<string, object> resultObj = JsonUtil.Deserialize(resultStr);
+
+    //Data：无
+    data["ChatServerAddress"]:聊天服务器的地址，GS需要保存，在下次请求时作为参数传给ChatServerCenter，并且在玩家登录时返回给客户端；
+    data["GameServerAddress"]:用于将玩家信息异步推送给聊天服务器（除登录以外的其它时间）
+    data["GameServerWebAddress"]:用于将玩家信息同步推送给聊天服务器（登录时）
+}
+
+二、ChatServer向GameServer提供的接口：
+1、以TCP方式来推送数据；
+2、推送的数据格式为JSON字符串，内容的类型定义为：
+type RequestObject struct {
+	// 玩家Id
+	Id string
+
+	// 合作商Id
+	PartnerId int 
+
+	// 服务器Id
+	ServerId int
+
+	// 玩家名称
+	Name string
+
+	// 玩家等级
+	Lv int
+
+	// 玩家Vip等级
+	Vip int
+
+	// 玩家登录令牌
+	Token string
+
+	// 玩家扩展信息
+	ExtendInfo string
+}
+
+3、任何一次数据变化，都需要将完整的数据推送过来

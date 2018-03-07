@@ -1,0 +1,246 @@
+2018-01-29 17:11:12---->
+开始连接Mysql数据库
+------------------------------------------------------
+2018-01-29 17:11:12---->
+连接Mysql数据库成功
+------------------------------------------------------
+2018-01-29 17:11:13---->
+InitSuccess.Register-rpcClientStart，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+rpcClient.RegisterGetClientCountHandler
+------------------------------------------------------
+2018-01-29 17:11:13---->
+rpcClient.RegisterGetPlayerCountHandler
+------------------------------------------------------
+2018-01-29 17:11:13---->
+AddPlayerRegisterTriggerFunc funcName:initPlayerHistory，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+AddPlayerUnregisterTriggerFunc funcName:clearPlayerHistory，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+rpcClient.RegisterCenterMessageHandler
+------------------------------------------------------
+2018-01-29 17:11:13---->
+ManageCenterAPIUrl:https://managecentertest-slg.moqiplayer.com/API
+------------------------------------------------------
+2018-01-29 17:11:13---->
+GroupType:Mix
+------------------------------------------------------
+2018-01-29 17:11:13---->
+SpecifiedIp:
+------------------------------------------------------
+2018-01-29 17:11:13---->
+SpecifiedGroupId:0
+------------------------------------------------------
+2018-01-29 17:11:13---->
+IsGroupOpen:false
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RefreshInterval:5
+------------------------------------------------------
+2018-01-29 17:11:13---->
+IsResultCompressed:true
+------------------------------------------------------
+2018-01-29 17:11:13---->
+开始刷新合作商列表
+------------------------------------------------------
+2018-01-29 17:11:13---->
+刷新合作商信息结束，合作商数量:4
+------------------------------------------------------
+2018-01-29 17:11:13---->
+开始刷新服务器列表
+------------------------------------------------------
+2018-01-29 17:11:14---->
+刷新服务器信息结束，服务器数量:38
+------------------------------------------------------
+2018-01-29 17:11:14---->
+开始刷新服务器组信息
+------------------------------------------------------
+2018-01-29 17:11:14---->
+刷新服务器组信息结束,服务器组数量:15
+------------------------------------------------------
+2018-01-29 17:11:14---->
+addList count:15, as follows:
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20022 彭亚川-测试 10.254.0.162:7891/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1483345500 117.139.247.210 1 0 6 1545985554 0 1 10.254.0.162:7891 10.254.0.162:7892 http://10.254.0.162:7893/ http://10.254.0.162:7894/ true :7895}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{9501 外网测试服 123.207.127.186:9501/  {"GameDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=s9501_slg;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=s9501_slg_log;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=gamemodel_a_t;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;"} 1 1 1 1509349730 123.207.127.186;10.135.135.63 1 2 9501 1919922452 0  10.135.135.63:9501 10.135.135.63:9502 http://123.207.127.186:9502/ http://10.135.135.63:9502/ true }
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20019 肖强2 10.255.0.3:10005/ 123.207.251.175:10074 {     "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=6;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1493169857 117.139.247.210 1 2 4 1493169857 1 4 10.255.0.3:10005 10.255.0.3:10006 http://10.255.0.3:10007/ http://10.255.0.3:10008/ false :7779}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{22222 check服务器 10.1.0.47:10022/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_check;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_check;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1515401463 117.139.247.210;10.1.0.47 1 0 22222 1608800794 0  10.1.0.47:10022 10.1.0.47:10023 http://10.1.0.47:10023/ http://10.1.0.47:10023/ false :20013}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20020 刘军 10.255.0.8:20020/ 123.207.25.1 { "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_liujun?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_liujun?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=2;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1510108248 117.139.247.210 1 0 20020 1510198204 0  10.255.0.8:20020 10.255.0.8:20021 10.255.0.8:20021 10.255.0.8:20021 true 10.255.0.8:20022}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20010 黄超 10.254.0.125:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_byron;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_byron;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1470277440 117.139.247.210 1 2 13 1470795872 1 2 10.254.0.125:10001 10.254.0.125:10003 http://10.254.0.125:10003/ http://10.254.0.125:10003/ false :20001}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20021 老左 10.255.0.7:10001/ 123.207.251.175:10074 {     "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_zxq?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_zxq?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1510624800 117.139.247.210 1 0 5 1510641781 0 123 10.255.0.7:10001 10.255.0.7:10002 http://10.255.0.7:10003/ http://10.255.0.7:10004/ true :20001}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20017 张笔辉 10.254.0.197:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_zbh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_zbh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516929820 117.139.247.210 1 0 17 1493169797 0 17 10.254.0.197:10001 10.254.0.197:10003 http://10.254.0.197:10003/ http://10.254.0.197:10003/ false :20001}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20050 开发测试服 117.139.247.210:11024/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1517034712 117.139.247.210;10.1.0.17 1 2 1 1496764800 1 123 10.1.0.47:10012 10.1.0.47:10013 http://10.1.0.47:10013/ http://10.1.0.47:10013/ false :20012}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20060 数值体验服 10.1.0.47:10014/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_shuzhi;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_shuzhi;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516273255 117.139.247.210;10.1.0.17 1 0 1 1516275180 0 123 10.1.0.47:10014 10.1.0.47:10015 http://10.1.0.47:10015/ http://10.1.0.47:10015/ true :20014}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20014 刘小虎 10.254.0.129:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_lxh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_lxh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516774490 117.139.247.210 1 2 20014 1646877374 0  10.254.0.129:10001 10.254.0.129:10002 http://10.254.0.129:10003/ http://10.254.0.129:10004/ false :20005}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20013 彭亚川 10.254.0.162:7881/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1509349730 117.139.247.210 1 2 10 1919922452 0 1 10.254.0.162:7881 10.254.0.162:7882 http://10.254.0.162:7883/ http://10.254.0.162:7884/ false :7885}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20015 刘小虎_太学院 10.254.0.129:20001/ 123.207.251.175:10074 { "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_building?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_building?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=3;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1511766866 117.139.247.210 1 2 15 1573726268 0  10.254.0.129:20001 10.254.0.129:20002 http://10.254.0.129:20003/ http://10.254.0.129:20004/ false :20006}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20018 肖强 10.254.0.115:10001/ 10.254.0.115:13011 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_xq;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_xq;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1493169857 117.139.247.210 1 2 3 1493169838 0 3 10.254.0.115:10001 10.254.0.115:10002 http://10.254.0.115:10002/ http://10.254.0.115:10002/ false :7778}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+&{20023 刘军2 10.255.0.8:20020/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_liujun2;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_liujun2;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1578044880 117.139.247.210 1 2 20023 1514972890 0  10.255.0.8:20020 10.255.0.8:20021 10.255.0.8:20021 10.255.0.8:20021 true 10.255.0.8:20022}
+------------------------------------------------------
+2018-01-29 17:11:14---->
+deleteList count:0, as follows:
+------------------------------------------------------
+2018-01-29 17:11:14---->
+updateList count:0, as follows:
+------------------------------------------------------
+2018-01-29 17:11:14---->
+InitSuccess.Register-rpcClientLogin，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:50---->
+开始连接Mysql数据库
+------------------------------------------------------
+2018-01-29 17:11:50---->
+连接Mysql数据库成功
+------------------------------------------------------
+2018-01-29 17:11:51---->
+InitSuccess.Register-rpcClientStart，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+rpcClient.RegisterGetClientCountHandler
+------------------------------------------------------
+2018-01-29 17:11:51---->
+rpcClient.RegisterGetPlayerCountHandler
+------------------------------------------------------
+2018-01-29 17:11:51---->
+AddPlayerRegisterTriggerFunc funcName:initPlayerHistory，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+AddPlayerUnregisterTriggerFunc funcName:clearPlayerHistory，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+rpcClient.RegisterCenterMessageHandler
+------------------------------------------------------
+2018-01-29 17:11:51---->
+ManageCenterAPIUrl:https://managecentertest-slg.moqiplayer.com/API
+------------------------------------------------------
+2018-01-29 17:11:51---->
+GroupType:Mix
+------------------------------------------------------
+2018-01-29 17:11:51---->
+SpecifiedIp:
+------------------------------------------------------
+2018-01-29 17:11:51---->
+SpecifiedGroupId:0
+------------------------------------------------------
+2018-01-29 17:11:51---->
+IsGroupOpen:false
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RefreshInterval:5
+------------------------------------------------------
+2018-01-29 17:11:51---->
+IsResultCompressed:true
+------------------------------------------------------
+2018-01-29 17:11:51---->
+开始刷新合作商列表
+------------------------------------------------------
+2018-01-29 17:11:51---->
+刷新合作商信息结束，合作商数量:4
+------------------------------------------------------
+2018-01-29 17:11:51---->
+开始刷新服务器列表
+------------------------------------------------------
+2018-01-29 17:11:51---->
+刷新服务器信息结束，服务器数量:38
+------------------------------------------------------
+2018-01-29 17:11:51---->
+开始刷新服务器组信息
+------------------------------------------------------
+2018-01-29 17:11:51---->
+刷新服务器组信息结束,服务器组数量:15
+------------------------------------------------------
+2018-01-29 17:11:51---->
+addList count:15, as follows:
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20018 肖强 10.254.0.115:10001/ 10.254.0.115:13011 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_xq;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_xq;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1493169857 117.139.247.210 1 2 3 1493169838 0 3 10.254.0.115:10001 10.254.0.115:10002 http://10.254.0.115:10002/ http://10.254.0.115:10002/ false :7778}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20060 数值体验服 10.1.0.47:10014/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_shuzhi;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_shuzhi;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516273255 117.139.247.210;10.1.0.17 1 0 1 1516275180 0 123 10.1.0.47:10014 10.1.0.47:10015 http://10.1.0.47:10015/ http://10.1.0.47:10015/ true :20014}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20010 黄超 10.254.0.125:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_byron;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_byron;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1470277440 117.139.247.210 1 2 13 1470795872 1 2 10.254.0.125:10001 10.254.0.125:10003 http://10.254.0.125:10003/ http://10.254.0.125:10003/ false :20001}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20022 彭亚川-测试 10.254.0.162:7891/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1483345500 117.139.247.210 1 0 6 1545985554 0 1 10.254.0.162:7891 10.254.0.162:7892 http://10.254.0.162:7893/ http://10.254.0.162:7894/ true :7895}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20021 老左 10.255.0.7:10001/ 123.207.251.175:10074 {     "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_zxq?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_zxq?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1510624800 117.139.247.210 1 0 5 1510641781 0 123 10.255.0.7:10001 10.255.0.7:10002 http://10.255.0.7:10003/ http://10.255.0.7:10004/ true :20001}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20023 刘军2 10.255.0.8:20020/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_liujun2;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_liujun2;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=1;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1578044880 117.139.247.210 1 2 20023 1514972890 0  10.255.0.8:20020 10.255.0.8:20021 10.255.0.8:20021 10.255.0.8:20021 true 10.255.0.8:20022}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20019 肖强2 10.255.0.3:10005/ 123.207.251.175:10074 {     "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10",     "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=6;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1493169857 117.139.247.210 1 2 4 1493169857 1 4 10.255.0.3:10005 10.255.0.3:10006 http://10.255.0.3:10007/ http://10.255.0.3:10008/ false :7779}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20013 彭亚川 10.254.0.162:7881/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_pyc;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1509349730 117.139.247.210 1 2 10 1919922452 0 1 10.254.0.162:7881 10.254.0.162:7882 http://10.254.0.162:7883/ http://10.254.0.162:7884/ false :7885}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20014 刘小虎 10.254.0.129:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_lxh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_lxh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516774490 117.139.247.210 1 2 20014 1646877374 0  10.254.0.129:10001 10.254.0.129:10002 http://10.254.0.129:10003/ http://10.254.0.129:10004/ false :20005}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20020 刘军 10.255.0.8:20020/ 123.207.25.1 { "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_liujun?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_liujun?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=2;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1510108248 117.139.247.210 1 0 20020 1510198204 0  10.255.0.8:20020 10.255.0.8:20021 10.255.0.8:20021 10.255.0.8:20021 true 10.255.0.8:20022}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20050 开发测试服 117.139.247.210:11024/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1517034712 117.139.247.210;10.1.0.17 1 2 1 1496764800 1 123 10.1.0.47:10012 10.1.0.47:10013 http://10.1.0.47:10013/ http://10.1.0.47:10013/ false :20012}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{22222 check服务器 10.1.0.47:10022/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_check;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_check;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1515401463 117.139.247.210;10.1.0.47 1 0 22222 1608800794 0  10.1.0.47:10022 10.1.0.47:10023 http://10.1.0.47:10023/ http://10.1.0.47:10023/ false :20013}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20015 刘小虎_太学院 10.254.0.129:20001/ 123.207.251.175:10074 { "GameDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/player_building?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "LogDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/log_dev?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "GameModelDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/model_building?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=3;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1511766866 117.139.247.210 1 2 15 1573726268 0  10.254.0.129:20001 10.254.0.129:20002 http://10.254.0.129:20003/ http://10.254.0.129:20004/ false :20006}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{9501 外网测试服 123.207.127.186:9501/  {"GameDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=s9501_slg;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=s9501_slg_log;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.66.192.35;port=3306;UserId=admin;Password=MOQIkaka$#@!1234;Database=gamemodel_a_t;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=true;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;"} 1 1 1 1509349730 123.207.127.186;10.135.135.63 1 2 9501 1919922452 0  10.135.135.63:9501 10.135.135.63:9502 http://123.207.127.186:9502/ http://10.135.135.63:9502/ true }
+------------------------------------------------------
+2018-01-29 17:11:51---->
+&{20017 张笔辉 10.254.0.197:10001/ 123.207.251.175:10074 { "GameDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=player_zbh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "LogDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=log_dev;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "GameModelDB": "DataSource=10.1.0.30;port=3309;UserId=root;Password=moqikaka3309;Database=model_zbh;Allow Zero Datetime=true;AllowUserVariables=True;charset=utf8;pooling=false;MinimumPoolSize=10;maximumpoolsize=10;command timeout=60;", "ChatDB": "root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=30s||MaxOpenConns=20||MaxIdleConns=10", "RedisConfig": "ConnectionString=10.1.0.42:6379;Password=redis_pwd;Database=0;MaxActive=50;MaxIdle=20;IdleTimeout=300;DialConnectTimeout=10;" } 1 1 1 1516929820 117.139.247.210 1 0 17 1493169797 0 17 10.254.0.197:10001 10.254.0.197:10003 http://10.254.0.197:10003/ http://10.254.0.197:10003/ false :20001}
+------------------------------------------------------
+2018-01-29 17:11:51---->
+deleteList count:0, as follows:
+------------------------------------------------------
+2018-01-29 17:11:51---->
+updateList count:0, as follows:
+------------------------------------------------------
+2018-01-29 17:11:51---->
+InitSuccess.Register-rpcClientLogin，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+通知:rpcClientStart-login初始化成功
+------------------------------------------------------
+2018-01-29 17:11:51---->
+通知:rpcClientLogin-rpcClientLoginSuccess初始化成功
+------------------------------------------------------

@@ -1,0 +1,57 @@
+2018-01-29 17:11:12---->
+RegisterReloadFunc funcName:config.reload，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:12---->
+RegisterReloadFunc funcName:dbConfig.reload，当前共有2个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:word.reloadForbid，当前共有3个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:word.reloadSensitive，当前共有4个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:channelMgr.Country.reload，当前共有5个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:channelMgr.Private.reload，当前共有6个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:channelMgr.World.reload，当前共有7个注册
+------------------------------------------------------
+2018-01-29 17:11:13---->
+RegisterReloadFunc funcName:ipConfig.reload，当前共有8个注册
+------------------------------------------------------
+2018-01-29 17:11:14---->
+rpcClient begins to connect ChatServerCenter: 10.254.0.115:13001...
+------------------------------------------------------
+2018-01-29 17:11:50---->
+RegisterReloadFunc funcName:config.reload，当前共有1个注册
+------------------------------------------------------
+2018-01-29 17:11:50---->
+RegisterReloadFunc funcName:dbConfig.reload，当前共有2个注册
+------------------------------------------------------
+2018-01-29 17:11:50---->
+RegisterReloadFunc funcName:word.reloadForbid，当前共有3个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RegisterReloadFunc funcName:word.reloadSensitive，当前共有4个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RegisterReloadFunc funcName:channelMgr.Country.reload，当前共有5个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RegisterReloadFunc funcName:channelMgr.Private.reload，当前共有6个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RegisterReloadFunc funcName:channelMgr.World.reload，当前共有7个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+RegisterReloadFunc funcName:ipConfig.reload，当前共有8个注册
+------------------------------------------------------
+2018-01-29 17:11:51---->
+rpcClient begins to connect ChatServerCenter: 10.254.0.115:13001...
+------------------------------------------------------
+2018-01-29 17:11:51---->
+Connect to ChatServerCenter. (local address: 10.254.0.115:49165)
+------------------------------------------------------

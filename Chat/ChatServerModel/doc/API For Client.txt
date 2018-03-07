@@ -1,0 +1,159 @@
+聊天服务器返回的数据进行了zlib压缩处理
+
+一、聊天频道定义，以字符串的方式来进行定义
+// 世界频道
+World
+
+// 国家频道
+Nation 
+
+// 私聊频道
+Private = 15
+
+二、请求参数定义（JSON字符串）
+// 请求的方法名称
+MethodName string
+
+// 请求的参数数组（注意参数的类型，int型就必须传int型，而不能传成string）
+Parameters []interface{}
+
+三、方法定义
+// 登陆
+// id:玩家Id
+// token:玩家登录时游戏服务器返回的token信息
+// partnerId:合作商Id
+// serverId:服务器Id
+func Login(id string, token string, partnerId int32, serverId int32)
+
+// 发送消息
+// channel:聊天频道
+// message:消息内容
+// voice:语音消息内容
+// toPlayerId:私聊玩家Id
+func SendMessage(channel string, message string, voice string, toPlayerId string)
+
+// 获取历史记录信息
+// 返回值：
+// data["World"]:世界频道最大的Id
+// data["Nation"]:国家频道最大的Id，如果没有国家或没有国家消息则为0
+// data["Private"]:map[string]int，其中key=PlayerId，Value=最大的Id
+func GetHistoryInfo() 
+
+// 获取历史记录
+// channel:聊天频道
+// messageId:消息Id（获取消息时，要取Id<messageId的数据，初始传一个int的最大值，之后再传客户端的最小值）
+// count:获取的消息数量
+// targetPlayerId:目标玩家Id
+func GetHistory(channel string, messageId int, count int, targetPlayerId string) 
+备注：由于客户端需要对未读的消息进行小红点提醒，所以需要永久保存已经读取过的消息的最大Id
+
+// 删除私聊历史记录
+// targetPlayerId:目标玩家Id
+func DeletePrivateHistory(targetPlayerId string)
+
+四、返回类型定义
+type ResponseObject struct {
+	// 响应结果的状态值
+	Code int
+
+	// 响应结果的状态值所对应的描述信息
+	Message string	
+
+	// 响应结果的数据
+	Data interface{}
+
+	// 响应结果对应的请求方法名称
+	MethodName string
+}
+
+五、响应结果的状态值Code、及对应的描述信息Message定义
+其中当返回值为：LoginOnAnotherDevice时客户端应该主动断开连接，而不要再进行自动重连
+
+六、SendMessage对应的Data的数据结构为
+type ResponseData struct {
+	// Id
+	Id int
+
+	// 聊天频道
+	Channel string
+
+	// 聊天消息
+	Message string
+
+	// 语音消息
+	Voice string
+
+	// 发送人
+	FromPlayerId string	// 私聊时使用
+	FromPlayer   string
+
+	// 接收人
+	ToPlayerId string `json:"ToPlayerId,omitempty"`	// 私聊时使用
+	ToPlayer   string `json:"ToPlayer,omitempty"`	// 私聊时使用
+
+	// 创建的时间戳
+	TimeStamp int64  
+}
+
+// 定义玩家对象
+type Player struct {
+	// 玩家Id
+	Id string
+
+	// 玩家名称
+	Name string
+
+	// 玩家等级
+	Lv int
+
+	// 玩家Vip等级
+	Vip int
+
+	// 服务器名称(不保存，动态赋值)
+	ServerName string
+
+	// 服务器组Id(不保存，动态赋值)
+	ServerGroupId int32
+
+	// 扩展信息
+	ExtendInfo string
+}
+
+八、Code、Status定义
+Success = newResultStatus(0, "Success", "成功")
+
+DataError             = newResultStatus(-1, "数据错误")
+DBError               = newResultStatus(-2, "数据库错误")
+MethodNotDefined      = newResultStatus(-3, "方法未定义")
+ParamIsEmpty          = newResultStatus(-4, "参数为空")
+ParamNotMatch         = newResultStatus(-5, "参数不匹配")
+ParamTypeError        = newResultStatus(-6, "参数类型错误")
+OnlySupportPOST       = newResultStatus(-7, "只支持POST")
+APINotDefined         = newResultStatus(-8, "API未定义")
+APIParamError         = newResultStatus(-9, "API参数错误")
+InvalidIP             = newResultStatus(-10, "IP无效")
+PlayerNotExists       = newResultStatus(-11, "玩家不存在")
+NoAvailableServer     = newResultStatus(-12, "没有可用的服务器")
+ClientDataError       = newResultStatus(-13, "客户端数据错误")
+TokenInvalid          = newResultStatus(-14, "令牌无效")
+ChannelNotDefined     = newResultStatus(-15, "聊天频道未定义")
+NoTargetMethod        = newResultStatus(-16, "找不到目标方法")
+ParamInValid          = newResultStatus(-17, "参数无效")
+NoLogin               = newResultStatus(-18, "尚未登陆")
+NotInUnion            = newResultStatus(-19, "不在公会中")
+NotInShimen           = newResultStatus(-20, "不在师门中")
+NotFoundTarget        = newResultStatus(-21, "未找到目标玩家")
+PlayerNotExist        = newResultStatus(-22, "玩家不存在")
+ServerGroupNotExist   = newResultStatus(-23, "服务器组不存在")
+NotInTeam             = newResultStatus(-24, "不在队伍中")
+LoginOnAnotherDevice  = newResultStatus(-25, "在另一台设备上登录")
+CantSendMessageToSelf = newResultStatus(-26, "不能给自己发消息")
+ResourceNotEnough     = newResultStatus(-27, "资源不足")
+NetworkError          = newResultStatus(-28, "网络错误")
+ContainForbiddenWord  = newResultStatus(-29, "含有屏蔽词语")
+SendMessageTooFast    = newResultStatus(-30, "发送消息太快")
+LvIsNotEnough         = newResultStatus(-31, "等级不足，系统未开放")
+RepeatTooMuch         = newResultStatus(-32, "重复次数太多")
+CantCrossServerTalk   = newResultStatus(-33, "不能跨服私聊")
+InSilent              = newResultStatus(-33, "已被禁言")
+NotInNation           = newResultStatus(-34, "不在国家中")

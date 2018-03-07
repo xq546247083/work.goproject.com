@@ -1,0 +1,47 @@
+<root>
+	<!--是否是DEBUG模式-->
+	<DEBUG>true</DEBUG>
+
+	<!--聊天服务器的监听地址-->
+	<BaseConfig>
+		<!--ChatCenter监听地址-->
+		<ChatCenterAddress>10.254.0.115:13001</ChatCenterAddress>		
+		<!--通信协议tcp/websocket-->
+		<Protocol>tcp</Protocol>
+		<!--内网地址-->
+		<PrivateIP>10.254.0.115</PrivateIP>
+		<!--公网地址-->
+		<PublicIP>10.254.0.115</PublicIP>
+		<!--为ChatServer提价服务的端口-->
+		<ChatServerPort>13011</ChatServerPort>
+		<!--为GameServer提供服务的端口-->
+		<GameServerPort>13012</GameServerPort>
+		<!--为GameServer提供服务的Web端口-->
+		<GameServerWebPort>13013</GameServerWebPort>		
+		<!--GoPs监控程序监听地址-->
+    	<GopsAddr>13014</GopsAddr>
+		<!--是否压缩返回给客户端的数据-->
+		<IfCompressData>true</IfCompressData>		
+	</BaseConfig>
+
+	<!--数据库连接字符串-->
+	<DBConnection>
+		<ConnectionString>
+			<![CDATA[ 
+				root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=60s
+			]]>
+		</ConnectionString>
+		<MaxOpenConns>10</MaxOpenConns>
+		<MaxIdleConns>5</MaxIdleConns>
+	</DBConnection>	
+
+	<!--监控配置-->
+	<MonitorConfig>
+		<!--监控使用的服务器IP-->
+		<ServerIp>10.254.0.115</ServerIp>
+		<!--监控使用的服务器名称-->
+		<ServerName>ChatServer_develop</ServerName>
+		<!--监控的时间间隔（单位：分钟）-->
+		<Interval>5</Interval>
+	</MonitorConfig>
+</root>

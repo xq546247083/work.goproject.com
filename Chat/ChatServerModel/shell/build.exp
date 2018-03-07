@@ -1,0 +1,58 @@
+#! /usr/bin/expect -f
+
+#设置命令提示符
+set cmd_prompt "*@ubuntu:*"
+
+#获取传入参数
+set ipaddress [lindex $argv 0]  
+set username [lindex $argv 1]  
+set passwd [lindex $argv 2]
+set groupid [lindex $argv 3]
+set sourceUrl [lindex $argv 4]
+
+if { $argc != 5 } {  
+	send_user "usage: $argv0 ipaddress username passwd groupid sourceUrl\n"
+	exit 1  
+}
+
+#设置等待超时(秒)
+set timeout 30  
+
+#ssh 连接服务器并输入密码
+spawn ssh $username@$ipaddress  
+expect {
+	"yes/no" { send "yes\r";exp_continue }  
+	"password:" { send "$passwd\r" }  
+} 
+expect $cmd_prompt  
+
+#root提权
+send "sudo -i\r"
+expect "*password*"
+send "$passwd\r"
+expect $cmd_prompt
+
+#新建目录
+send "mkdir -p /home/bin/$groupid\r"
+expect $cmd_prompt
+
+#wget 下载更新文件并保存为ChatServer.zip
+send "cd /home/bin/$groupid\r"
+send "wget -O ChatServer.zip $sourceUrl 2>/dev/null\r"
+expect $cmd_prompt
+
+#解压文件
+send "unzip -o ChatServer.zip\r"
+expect $cmd_prompt
+
+#后台运行
+send "/home/bin/$groupid/ChatServer &\r"
+expect $cmd_prompt
+
+#退出root
+send "exit\r"
+expect $cmd_prompt
+
+#退出shell
+send "exit\r"
+expect eof { exit 0 }  
