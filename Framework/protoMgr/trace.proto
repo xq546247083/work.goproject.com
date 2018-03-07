@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package protoMgr;
+
+// 跟踪的项
+message TraceItem {
+	string name = 1;	// 名称，通常是方法名称
+	int64 startTime = 2;	// 开始时间戳，单位：ns
+	int64 endTime = 3;		// 结束时间戳，单位：ns
+	int64 useTime = 4;	// 消耗时间，单位：ms
+}
+
+message TraceObject {
+	int64 id = 1;	// 跟踪唯一Id
+	string extendInfo = 2;
+	repeated TraceItem TraceItems = 3;	// 追踪项列表
+}
