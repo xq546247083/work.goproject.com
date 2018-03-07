@@ -1,9 +1,0 @@
-2018-01-29 09:26:53---->
-找不到指定的方法：map[ChatModule_GetHistory:0xc0420664b0 ChatModule_GetHistoryInfo:0xc042066500 ChatModule_Login:0xc042066550 ChatModule_SendMessage:0xc0420665a0 ChatModule_DeletePrivateHistory:0xc042066460],ChatModule_SednMessage
-------------------------------------------------------
-2018-01-29 09:27:01---->
-1
-------------------------------------------------------
-2018-01-29 09:34:39---->
-1
-------------------------------------------------------

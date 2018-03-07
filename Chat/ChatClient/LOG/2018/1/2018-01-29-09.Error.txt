@@ -1,3 +1,0 @@
-2018-01-29 09:34:27---->
-读取消息错误：read tcp 10.254.0.115:52350->10.254.0.115:13011: wsarecv: An existing connection was forcibly closed by the remote host.，本次读取的字节数为：0
-------------------------------------------------------
