@@ -5,13 +5,13 @@
 	<!--聊天服务器的监听地址-->
 	<BaseConfig>
 		<!--ChatCenter监听地址-->
-		<ChatCenterAddress>10.254.0.115:13001</ChatCenterAddress>		
+		<ChatCenterAddress>192.168.0.102:13001</ChatCenterAddress>		
 		<!--通信协议tcp/websocket-->
 		<Protocol>tcp</Protocol>
 		<!--内网地址-->
-		<PrivateIP>10.254.0.115</PrivateIP>
+		<PrivateIP>192.168.0.102</PrivateIP>
 		<!--公网地址-->
-		<PublicIP>10.254.0.115</PublicIP>
+		<PublicIP>192.168.0.102</PublicIP>
 		<!--为ChatServer提价服务的端口-->
 		<ChatServerPort>13011</ChatServerPort>
 		<!--为GameServer提供服务的端口-->
@@ -28,7 +28,7 @@
 	<DBConnection>
 		<ConnectionString>
 			<![CDATA[ 
-				root:moqikaka3309@tcp(10.1.0.30:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=60s
+				root:123456@tcp(192.168.0.102:3309)/chatserver?charset=utf8&parseTime=true&loc=Local&timeout=60s
 			]]>
 		</ConnectionString>
 		<MaxOpenConns>10</MaxOpenConns>
@@ -38,7 +38,7 @@
 	<!--监控配置-->
 	<MonitorConfig>
 		<!--监控使用的服务器IP-->
-		<ServerIp>10.254.0.115</ServerIp>
+		<ServerIp>192.168.0.102</ServerIp>
 		<!--监控使用的服务器名称-->
 		<ServerName>ChatServer_develop</ServerName>
 		<!--监控的时间间隔（单位：分钟）-->
