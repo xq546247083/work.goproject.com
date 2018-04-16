@@ -6,7 +6,7 @@
 	<BaseConfig>
 		<!--ChatCenter监听地址-->
 		<ChatCenterAddress>192.168.0.102:13001</ChatCenterAddress>		
-		<!--通信协议tcp/websocket-->
+		<!--通信协议tcp/websocket/websockets-->
 		<Protocol>tcp</Protocol>
 		<!--内网地址-->
 		<PrivateIP>192.168.0.102</PrivateIP>
@@ -44,4 +44,9 @@
 		<!--监控的时间间隔（单位：分钟）-->
 		<Interval>5</Interval>
 	</MonitorConfig>
+	<!--https证书配置-->
+	<CrtConfig>
+		<Key>test.key</Key>
+		<Crt>test.crt</Crt>
+	</CrtConfig>
 </root>

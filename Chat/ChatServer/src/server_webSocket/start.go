@@ -48,3 +48,18 @@ func Start(wg *sync.WaitGroup, address string) {
 		panic(fmt.Sprintf("server_websocket.ListenAndServe, err:%v", err))
 	}
 }
+
+// 启动https服务器
+func Start2(wg *sync.WaitGroup, address,crt,key string) {
+	defer wg.Done()
+
+	msg := fmt.Sprintf("server_websocket begins to listen TLS on:%s...", address)
+	fmt.Println(msg)
+	logUtil.InfoLog(msg)
+
+	http.HandleFunc("/", handleConn)
+	err := http.ListenAndServeTLS(address,crt,key, nil)
+	if err != nil {
+		panic(fmt.Sprintf("server_websocket.ListenAndServeTLS, err:%v", err))
+	}
+}

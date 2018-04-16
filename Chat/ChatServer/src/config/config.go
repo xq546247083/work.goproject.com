@@ -19,6 +19,7 @@ func init() {
 	configManager.RegisterInitFunc(initBaseConfig)
 	configManager.RegisterInitFunc(initDBConfig)
 	configManager.RegisterInitFunc(initMonitorConfig)
+	configManager.RegisterInitFunc(initCrtConfig)
 }
 
 func init() {

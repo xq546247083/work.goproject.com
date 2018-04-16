@@ -67,8 +67,11 @@ func main() {
 	// 设置chatServer配置，并启动服务器
 	if baseConfig.Protocol == "tcp" {
 		go server_tcp.Start(&wg, baseConfig.GetPrivateChatServerAddress())
-	} else {
+	} else if baseConfig.Protocol == "websocket" {
 		go server_webSocket.Start(&wg, baseConfig.GetPrivateChatServerAddress())
+	}else{
+		crtConfig := config.GetCrtConfig()
+		go server_webSocket.Start2(&wg, baseConfig.GetPrivateChatServerAddress(),crtConfig.Crt,crtConfig.Key)
 	}
 
 	// 启动监听游戏服务器的服务器

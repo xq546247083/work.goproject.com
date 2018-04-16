@@ -85,8 +85,8 @@ func initBaseConfig(config *configUtil.XmlConfig) error {
 	baseConfig = tempConfig
 	debugUtil.Printf("baseConfig:%v\n", baseConfig)
 
-	if baseConfig.Protocol != "tcp" && baseConfig.Protocol != "websocket" {
-		panic("Protocol Error, it should be either tcp or websocket")
+	if baseConfig.Protocol != "tcp" && baseConfig.Protocol != "websocket" && baseConfig.Protocol != "websockets" {
+		panic("Protocol Error, it should be either tcp or websocket or websockets")
 	}
 
 	return nil

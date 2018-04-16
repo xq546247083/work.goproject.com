@@ -213,14 +213,7 @@ func StartClient(startCh chan int) {
 	case <-loginSucceedCh:
 		// 发送心跳包
 		go heartBeat()
-	case <-func() chan bool {
-		timeout := make(chan bool, 1)
-		go func() {
-			time.Sleep(30 * time.Second)
-			timeout <- false
-		}()
-		return timeout
-	}():
+	case <-time.After(30 * time.Second):
 		debugUtil.Println("Login Timeout")
 
 		// 如果是启动程序调用，则panic，否则不处理
