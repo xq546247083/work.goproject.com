@@ -42,7 +42,7 @@ func Start(wg *sync.WaitGroup, address string) {
 		}
 
 		// 验证ip是否有效
-		ip := netUtil.GetRemoteIp(conn)
+		ip := netUtil.GetConnAddr(conn).Host
 		if debugUtil.IsDebug() == false && ipMgr.IsIpValid(ip) == false {
 			conn.Close()
 			logUtil.ErrorLog("RemoteIP:%s Not Allowed for server_gs", ip)

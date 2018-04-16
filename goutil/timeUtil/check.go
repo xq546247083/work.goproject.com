@@ -49,3 +49,15 @@ func CheckIfInRange(checkTime time.Time, timeSpan1 string, addSecond1 int, timeS
 
 	return false
 }
+
+// 检查两个日期是否在同一天
+// time1:时间1
+// time2:时间2
+// 返回值:
+// bool:true：在同一天 false:不在同一天
+func CheckIfInSameDate(time1, time2 time.Time) bool {
+	y1, m1, d1 := time1.Date()
+	y2, m2, d2 := time1.Date()
+
+	return y1 == y2 && m1 == m2 && d1 == d2
+}

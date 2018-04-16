@@ -3,11 +3,11 @@ package webServer
 import (
 	"fmt"
 	"net/http"
+	"strings"
 	"time"
 
-	"work.goproject.com/Framework/ipMgr"
-	"work.goproject.com/goutil/debugUtil"
 	"work.goproject.com/goutil/logUtil"
+	"work.goproject.com/goutil/typeUtil"
 )
 
 var (
@@ -39,17 +39,17 @@ type WebServer struct {
 	// 未找到指定的回调时的处理器，通常是因为该url是可变的，而不是固定的
 	notFoundPageHandler func(*Context)
 
-	// 是否需要验证IP
-	isCheckIP bool
-
 	// 在Debug模式下是否需要验证IP地址，默认情况下不验证
 	ifCheckIPWhenDebug bool
 
 	// 当IP无效时调用的处理器
 	ipInvalidHandler func(*Context)
 
+	// 用于检测参数是否有效的处理器
+	paramCheckHandler func(typeUtil.MapData, []string) ([]string, bool)
+
 	// 当检测到参数无效时调用的处理器
-	paramInvalidHandler func(*Context)
+	paramInvalidHandler func(*Context, []string)
 
 	// 处理请求数据的处理器（例如压缩、解密等）
 	requestDataHandler func(*Context, []byte) ([]byte, error)
@@ -67,7 +67,7 @@ type WebServer struct {
 // configObj：Handler配置对象
 func (this *WebServer) RegisterHandler(path string, handlerFuncObj handlerFunc, configObj *HandlerConfig) {
 	// 判断是否已经注册过，避免命名重复
-	if _, exists := this.handlerMap[path]; exists {
+	if _, exist := this.handlerMap[path]; exist {
 		panic(fmt.Sprintf("%s has been registered, please try a new path", path))
 	}
 
@@ -79,8 +79,8 @@ func (this *WebServer) RegisterHandler(path string, handlerFuncObj handlerFunc, 
 // 返回值:
 // 请求方法
 // 是否存在
-func (this *WebServer) getHandler(path string) (handlerObj *handler, exists bool) {
-	handlerObj, exists = this.handlerMap[path]
+func (this *WebServer) getHandler(path string) (handlerObj *handler, exist bool) {
+	handlerObj, exist = this.handlerMap[path]
 	return
 }
 
@@ -136,7 +136,7 @@ func (this *WebServer) SetDefaultPageHandler(handler func(*Context)) {
 // isTerminate:是否终止本次请求
 func (this *WebServer) handleDefaultPage(context *Context) (isTerminate bool) {
 	// 首页进行特别处理
-	if _, exists := defaultPageMap[context.GetRequestPath()]; exists {
+	if _, exist := defaultPageMap[context.GetRequestPath()]; exist {
 		if this.defaultPageHandler != nil {
 			this.defaultPageHandler(context)
 		} else {
@@ -163,34 +163,13 @@ func (this *WebServer) SetIPInvalidHandler(handler func(*Context)) {
 	this.ipInvalidHandler = handler
 }
 
-// 验证IP
-// 返回值
-// isTerminate:是否终止本次请求
-func (this *WebServer) handleIP(context *Context) (isTerminate bool) {
-	if this.isCheckIP == false {
-		return
-	}
-
-	if debugUtil.IsDebug() == true && this.ifCheckIPWhenDebug == false {
-		return
-	}
-
-	if ipMgr.IsIpValid(context.GetRequestIP()) {
-		return
-	}
-
-	if this.ipInvalidHandler != nil {
-		this.ipInvalidHandler(context)
-	} else {
-		http.Error(context.responseWriter, "你的IP不允许访问，请联系管理员", 401)
-	}
-
-	isTerminate = true
-	return
+// 设定用于检测参数是否有效的处理器
+func (this *WebServer) SetParamCheckHandler(handler func(typeUtil.MapData, []string) ([]string, bool)) {
+	this.paramCheckHandler = handler
 }
 
 // 设定当检测到参数无效时调用的处理器
-func (this *WebServer) SetParamInvalidHandler(handler func(*Context)) {
+func (this *WebServer) SetParamInvalidHandler(handler func(*Context, []string)) {
 	this.paramInvalidHandler = handler
 }
 
@@ -243,11 +222,6 @@ func (this *WebServer) ServeHTTP(responseWriter http.ResponseWriter, request *ht
 		this.handleExecuteTime(context)
 	}()
 
-	// 验证IP（全局）
-	if this.handleIP(context) {
-		return
-	}
-
 	// 处理请求方法
 	if this.handleMethod(context) {
 		return
@@ -255,8 +229,8 @@ func (this *WebServer) ServeHTTP(responseWriter http.ResponseWriter, request *ht
 
 	// 根据路径选择不同的处理方法
 	var handlerObj *handler
-	var exists bool
-	if handlerObj, exists = this.getHandler(context.GetRequestPath()); !exists {
+	var exist bool
+	if handlerObj, exist = this.getHandler(context.GetRequestPath()); !exist {
 		if this.notFoundPageHandler != nil {
 			this.notFoundPageHandler(context)
 		} else {
@@ -265,7 +239,7 @@ func (this *WebServer) ServeHTTP(responseWriter http.ResponseWriter, request *ht
 		return
 	}
 
-	// Check IP（局部）
+	// Check IP
 	if handlerObj.checkIP(context, this.ifCheckIPWhenDebug) == false {
 		if this.ipInvalidHandler != nil {
 			this.ipInvalidHandler(context)
@@ -276,11 +250,11 @@ func (this *WebServer) ServeHTTP(responseWriter http.ResponseWriter, request *ht
 	}
 
 	// Check Param
-	if handlerObj.checkParam(context, this.specifiedMethod) == false {
+	if missParamList, valid := handlerObj.checkParam(context, this.specifiedMethod, this.paramCheckHandler); valid == false {
 		if this.paramInvalidHandler != nil {
-			this.paramInvalidHandler(context)
+			this.paramInvalidHandler(context, missParamList)
 		} else {
-			http.Error(context.responseWriter, "你的参数不正确，请检查", 500)
+			http.Error(context.responseWriter, fmt.Sprintf("你的参数不正确，请检查，缺少以下参数:%s", strings.Join(missParamList, ",")), 500)
 		}
 		return
 	}
@@ -295,6 +269,5 @@ func newWebServer(isCheckIP bool) *WebServer {
 	return &WebServer{
 		handlerMap: make(map[string]*handler),
 		headerMap:  make(map[string]string),
-		isCheckIP:  isCheckIP,
 	}
 }

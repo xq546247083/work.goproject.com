@@ -11,7 +11,7 @@ import (
 // Http服务器对象
 type HttpServer struct {
 	addr string
-	*WebServer
+	IWebServer
 	server http.Server
 }
 
@@ -37,12 +37,13 @@ func (this *HttpServer) Start(wg *sync.WaitGroup) {
 }
 
 // 创建新的HttpServer
+// isCheckIP:该属性已丢弃，可以任意赋值
 func NewHttpServer(addr string, isCheckIP bool) *HttpServer {
 	webServerObj := newWebServer(isCheckIP)
 
 	return &HttpServer{
-		addr:      addr,
-		WebServer: webServerObj,
+		addr:       addr,
+		IWebServer: webServerObj,
 		server: http.Server{
 			Addr:    addr,
 			Handler: webServerObj,

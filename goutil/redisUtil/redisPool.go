@@ -320,6 +320,16 @@ func (this *RedisPool) HMSet(key string, value interface{}) error {
 	return err
 }
 
+// 获取key对应的List的长度
+func (this *RedisPool) LLEN(key string) (count int, err error) {
+	conn := this.GetConnection()
+	defer conn.Close()
+
+	count, err = redis.Int(conn.Do("LLEN", key))
+
+	return
+}
+
 // 获取key对应的List的指定区间的内容
 // key:key
 // start:开始区间

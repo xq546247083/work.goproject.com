@@ -13,7 +13,7 @@ type HttpsServer struct {
 	addr         string
 	certFileName string
 	keyFileName  string
-	*WebServer
+	IWebServer
 	server http.Server
 }
 
@@ -39,6 +39,7 @@ func (this *HttpsServer) Start(wg *sync.WaitGroup) {
 }
 
 // 创建新的HttpsServer
+// isCheckIP:该属性已丢弃，可以任意赋值
 func NewHttpsServer(addr, certFileName, keyFileName string, isCheckIP bool) *HttpsServer {
 	webServerObj := newWebServer(isCheckIP)
 
@@ -46,7 +47,7 @@ func NewHttpsServer(addr, certFileName, keyFileName string, isCheckIP bool) *Htt
 		addr:         addr,
 		certFileName: certFileName,
 		keyFileName:  keyFileName,
-		WebServer:    webServerObj,
+		IWebServer:   webServerObj,
 		server: http.Server{
 			Addr:    addr,
 			Handler: webServerObj,

@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"work.goproject.com/goutil/logUtil"
+	"work.goproject.com/goutil/netUtil"
 	"work.goproject.com/goutil/typeUtil"
-	"work.goproject.com/goutil/webUtil"
 )
 
 const (
@@ -66,7 +66,7 @@ func (this *Context) GetRequestPath() string {
 
 // 获取请求的客户端的IP地址
 func (this *Context) GetRequestIP() string {
-	return webUtil.GetRequestIP(this.request)
+	return netUtil.GetHttpAddr(this.request).Host
 }
 
 // 获取请求执行的秒数
@@ -77,7 +77,7 @@ func (this *Context) GetExecuteSeconds() int64 {
 // 格式化context对象
 func (this *Context) String() string {
 	var bodyContent string
-	if bytes, exists, err := this.GetRequestBytes(); err != nil && exists {
+	if bytes, exist, err := this.GetRequestBytes(); err != nil && exist {
 		bodyContent = string(bytes)
 	}
 
@@ -173,9 +173,9 @@ func (this *Context) parseBodyContent() (err error) {
 // 获取请求字节数据
 // 返回值:
 // []byte:请求字节数组
-// exists:是否存在数据
+// exist:是否存在数据
 // error:错误信息
-func (this *Context) GetRequestBytes() (result []byte, exists bool, err error) {
+func (this *Context) GetRequestBytes() (result []byte, exist bool, err error) {
 	if err = this.parseBodyContent(); err != nil {
 		return
 	}
@@ -192,7 +192,7 @@ func (this *Context) GetRequestBytes() (result []byte, exists bool, err error) {
 		}
 	}
 
-	exists = true
+	exist = true
 
 	return
 }
@@ -200,16 +200,16 @@ func (this *Context) GetRequestBytes() (result []byte, exists bool, err error) {
 // 获取请求字符串数据
 // 返回值:
 // result:请求字符串数据
-// exists:是否存在数据
+// exist:是否存在数据
 // error:错误信息
-func (this *Context) GetRequestString() (result string, exists bool, err error) {
+func (this *Context) GetRequestString() (result string, exist bool, err error) {
 	var data []byte
-	if data, exists, err = this.GetRequestBytes(); err != nil || !exists {
+	if data, exist, err = this.GetRequestBytes(); err != nil || !exist {
 		return
 	}
 
 	result = string(data)
-	exists = true
+	exist = true
 
 	return
 }
@@ -219,9 +219,9 @@ func (this *Context) GetRequestString() (result string, exists bool, err error) 
 // isCompressed:数据是否已经被压缩
 // 返回值:
 // 错误对象
-func (this *Context) Unmarshal(obj interface{}) (exists bool, err error) {
+func (this *Context) Unmarshal(obj interface{}) (exist bool, err error) {
 	var data []byte
-	if data, exists, err = this.GetRequestBytes(); err != nil || !exists {
+	if data, exist, err = this.GetRequestBytes(); err != nil || !exist {
 		return
 	}
 
@@ -231,7 +231,7 @@ func (this *Context) Unmarshal(obj interface{}) (exists bool, err error) {
 		return
 	}
 
-	exists = true
+	exist = true
 
 	return
 }
