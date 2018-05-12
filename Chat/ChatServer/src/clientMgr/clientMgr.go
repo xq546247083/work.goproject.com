@@ -26,6 +26,9 @@ func UnregisterClient(clientObj IClient) {
 }
 
 func GetClient(id int32) (clientObj IClient, exists bool) {
+	mutex.Lock()
+	defer mutex.Unlock()
+	
 	clientObj, exists = clientMap[id]
 	return
 }
